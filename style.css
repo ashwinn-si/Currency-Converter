@@ -1,0 +1,171 @@
+:root {
+    --primary-color: #003135;
+    --secondary-color: #024950;
+    --highlight-color: #964734;
+    --accent-color: #0FA4AF;
+    --light-accent-color: #AFDDE5;
+    --font-color:#F0F0F0;
+    --inputContainer-color:black;
+    --convertButton-color:#28A745;
+    --convertButton-hover-color:#218838;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var(--font-color);
+}
+
+body {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.sub-container {
+    width: 500px;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: var(--light-accent-color);
+}
+
+
+
+.sub-container p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.sub-container p span {
+    font-size: 3rem;
+}
+
+.theme-selector-container{  
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+
+}
+
+#theme-selection{
+    padding: 5px 6px;
+    border-radius: 10px;
+    border:solid 1px;
+    color: black;
+}
+#theme-selection option{
+    color: black;
+}
+
+.main-container {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.input-value-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-value-container input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--highlight-color);
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--inputContainer-color);
+}
+
+.options-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+}
+.options-container div p{
+    font-size: 1.2rem;
+}
+
+.currency-selection-box {
+    padding: 5px;
+    font-size: 1rem;
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+    color: var(--inputContainer-color);
+    background-color: var(--light-accent-color);
+    margin: 10px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    background-color: var(--convertButton-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--convertButton-hover-color);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.output-value-container {
+    margin-top: 20px;
+    padding: 5px;
+    background-color: var(--light-accent-color);
+    border-radius: 8px;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    visibility: hidden;
+}
+
+#result-text {
+    font-weight: 600;
+}
+
+@media (max-width:768px) {
+    .sub-container{
+        width: 350px;
+    }
+    .sub-container p{
+        font-size: 1.7rem;
+    }
+    #theme-selection {
+        font-size: 0.7rem;
+    }
+    .options-container div p{
+        font-size: 1rem;
+    }
+    .currency-selection-box{
+        font-size: 0.8rem;
+    }
+    button{
+        font-size: 1rem;
+    }
+    .output-value-container{
+        font-size: 1rem;
+    }
+}
